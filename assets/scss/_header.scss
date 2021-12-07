@@ -1,0 +1,30 @@
+@mixin resetLink($text,$font,$color){
+  text-decoration: $text;
+  font-size: $font;
+  color: $color;
+}
+header{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+    .nav{
+      display: flex;
+      justify-content: space-around;
+      &__list{
+        list-style: none;
+        display: flex;
+      }
+      &__item{
+        margin-left: 65px;
+        //justify-content: space-between;
+      }
+      &__logo {
+        @include resetLink(none,$logofont-size,$secondry);
+      }
+        &__link{
+          @include resetLink(none,$headersize,$secondry);
+        }
+  }
+}
